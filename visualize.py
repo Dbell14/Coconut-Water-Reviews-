@@ -6,14 +6,14 @@ def make_plot(sentiments: list) -> list:
     Assigned each sentiment count to a variable. Then plotted those to 
     a graph per the variable of each sentiment.
     """
+    print(f'{sentiments = }')
 
-    data=()
     a= sentiments.count ("positive")
     b= sentiments.count ("negative")
     c= sentiments.count ("neutral")
     d= sentiments.count ("irrelevant")
 
-    #print(d)
+    print(a, b, c, d)
 
 
     fig, ax = plt.subplots()
@@ -21,6 +21,6 @@ def make_plot(sentiments: list) -> list:
     ax.set_title("Test Plot")
     ax.set_xlabel("Sentiments")
     ax.set_ylabel("Number of Sentiments")
-    fig.savefig("images/")
+    fig.savefig("images/graphed_sentiments")
  
 

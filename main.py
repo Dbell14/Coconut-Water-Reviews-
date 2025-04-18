@@ -16,7 +16,7 @@ def run(filepath: str):
 
     # extract the reviews from the json file
     extracted_reviews = results["results"]
-   # print(extracted_reviews)
+    #print(extracted_reviews)
 
     # get a list of sentiments for each line using get_sentiment
     ended_sentiments = get_sentiment(extracted_reviews)
@@ -25,12 +25,14 @@ def run(filepath: str):
     make_plot(ended_sentiments)
 
 
-    # return sentiments
-    #print(ended_sentiments)
-    #sentiment_count = zip(extracted_reviews, ended_sentiments)
+   # return sentiments
+    print(ended_sentiments)
+    sentiment_count = zip(extracted_reviews, ended_sentiments)
     #print(list(sentiment_count))
-    #for review, sentiments in sentiment_count:
-        #print(f"review:{review}\n sentiment:{sentiments}\n")
+    for review, sentiments in sentiment_count:
+        print(f"review:{review}\n sentiment:{sentiments}\n")
+    
+   
     return ended_sentiments
 
 

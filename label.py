@@ -17,15 +17,13 @@ def get_sentiment(text: list) -> list:
     for i in text:
         if type(i)!=str:
             return "Wrong input. text must be an array of strings."
-    #for i in text:
-     #   if not isinstance(i,str):
-      #      return "Wrong input"
+    
      
     
 
 
     system_prompt = """You are a assistant with authority on categorizing sentiments for customer reviews.
-    The categories are negative, positive, neutral, and irrelevant. 
+    The categories are negative, positive, neutral, and irrelevant.  
     """
 
     prompt = f"""
@@ -41,9 +39,9 @@ def get_sentiment(text: list) -> list:
         messages=[
 	   { "role": "assistant",  "content": system_prompt },
        { "role": "user",  "content": prompt }
-    ]
+        ]
     
-)
+    )
 
  #display the output
     modified_list = response.choices[0].message.content.split("\n")
@@ -58,15 +56,4 @@ def get_sentiment(text: list) -> list:
     
 
 
-    #pass
-#in_data = [
- #     "I will never buy another brand again, I love this ring",
-  # #   "It's an ok ring. Some features could be better but for the price its fine.",
-   #   "its a ring",
-     # "Bought this ring and it came broken. rip-off."
-   # ]
-#error_data1 = []
-#error_data2 = [1, 2, 3, 4, 5]
-#print(get_sentiment(in_data))
-#for i in error_data2:
-   # print(type(i))
+   
