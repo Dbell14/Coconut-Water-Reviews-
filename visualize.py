@@ -21,7 +21,6 @@ def make_plot(sentiments: list) -> list:
     ax.set_title("Test Plot")
     ax.set_xlabel("Sentiments")
     ax.set_ylabel("Number of Sentiments")
-    #ax.set_ylim(0, 25)
     fig.savefig("images/")
  
 
